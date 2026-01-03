@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+  <title>Event Listener Demo</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 30px;
+    }
+
+    #myBox {
+      width: 200px;
+      height: 100px;
+      background-color: lightblue;
+      margin: 20px;
+      text-align: center;
+      line-height: 100px;
+      font-weight: bold;
+      transition: all 0.3s ease;
+    }
+    .dynamite {
+      display: none;
+    }
+
+    button {
+      margin: 5px;
+      padding: 10px 15px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Event Listener Interactions</h2>
+
+  <button id="toggleBtn">Toggle Box (Click)</button>
+  <button id="hoverBtn">Hover Me</button>
+  <button id="dblClickBtn">Double Click Me</button>
+  <p>Press <strong>Spacebar</strong> or <strong>Enter</strong> to toggle the box.</p>
+
+  <div id="myBox">Hello, I’m a box!</div>
+
+  <script>
+    const myBox = document.getElementById('myBox');
+    const toggleBtn = document.getElementById('toggleBtn');
+    const hoverBtn = document.getElementById('hoverBtn');
+    const dblClickBtn = document.getElementById('dblClickBtn');
+    toggleBtn.addEventListener('click', () => {
+      myBox.classList.toggle('dynamite');
+    });
+    hoverBtn.addEventListener('mouseenter', () => {
+      myBox.style.backgroundColor = 'lightgreen';
+      myBox.textContent = 'Hovered!';
+    });
+    hoverBtn.addEventListener('mouseleave', () => {
+      myBox.style.backgroundColor = 'lightblue';
+      myBox.textContent = 'Hello, I’m a box!';
+    });
+
+    dblClickBtn.addEventListener('dblclick', () => {
+      myBox.style.backgroundColor = 'orange';
+      myBox.textContent = 'Double Clicked!';
+    });
+    document.addEventListener('keydown', (event) => {
+      if (event.code === 'Space' || event.code === 'Enter') {
+        myBox.classList.toggle('dynamite');
+      }
+      if (event.code === 'KeyR') {
+        myBox.style.backgroundColor = 'red';
+        myBox.textContent = 'Pressed R!';
+      }
+    });
+    document.addEventListener('mousemove', (event) => {
+      myBox.style.transform = `translate(${event.clientX/50}px, ${event.clientY/50}px)`;
+    });
+  </script>
+
+</body>
+</html>

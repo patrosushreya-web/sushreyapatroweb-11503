@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2 id="title">Original Heading</h2>
+
+<p class="msg">This is the original message.</p>
+
+<button onclick="changeContent()">Click to Change Content</button>
+
+<script>
+  function changeContent() {
+    // Using getElementById()
+    document.getElementById("title").innerHTML = "Heading Changed!";
+
+    // Using querySelector() to select the first <p> with class msg
+    document.querySelector(".msg").innerHTML = "Message updated using querySelector!";
+  }
+</script>
+
+</body>
+</html>
+

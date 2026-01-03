@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  .hidden {
+    display: none;
+  }
+
+  .highlight {
+    color: red;
+    font-weight: bold;
+  }
+</style>
+</head>
+<body>
+
+<p id="text">This is a sample paragraph.</p>
+
+<button onclick="showText()">Show</button>
+<button onclick="hideText()">Hide</button>
+<button onclick="toggleText()">Toggle</button>
+<button onclick="toggleHighlight()">Toggle Highlight</button>
+
+<script>
+  function showText() {
+    document.getElementById("text").classList.remove("hidden");
+  }
+
+  function hideText() {
+    document.getElementById("text").classList.add("hidden");
+  }
+
+  function toggleText() {
+    document.getElementById("text").classList.toggle("hidden");
+  }
+
+  function toggleHighlight() {
+    document.getElementById("text").classList.toggle("highlight");
+  }
+</script>
+
+</body>
+</html>
+

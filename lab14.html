@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h3>Simple Form Validation</h3>
+
+<!-- Form with onsubmit -->
+<form onsubmit="return checkForm()">
+
+  Name: 
+  <input type="text" id="username" oninput="checkInput()" />
+  <br><br>
+
+  <button type="submit">Submit</button>
+</form>
+
+<script>
+  // Runs when user types
+  function checkInput() {
+    let name = document.getElementById("username").value;
+
+    if (name.length < 3) {
+      console.log("Name too short"); // simple feedback in console
+    }
+  }
+
+  // Runs when form is submitted
+  function checkForm() {
+    let name = document.getElementById("username").value;
+
+    if (name.length >3) {
+      alert("Name must be at least 3 characters!");
+      return false; // stop form submit
+    }
+
+    alert("Form submitted successfully!");
+    return true; // allow submit
+  }
+</script>
+
+</body>
+</html>

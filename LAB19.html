@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Event Listener Demo</title>
+</head>
+<body>
+
+<h2 id="text">Click the button to add/remove events</h2>
+
+<button id="addBtn">Add Event Listener</button>
+<button id="removeBtn">Remove Event Listener</button>
+
+<p id="message"></p>
+
+<script>
+    var text = document.getElementById("text");
+    var message = document.getElementById("message");
+
+    // Function for mouse click event
+    function showMessage() {
+        message.innerHTML = "Mouse click event triggered!";
+    }
+
+    // Function for mouse over event
+    function mouseOverEffect() {
+        text.innerHTML = "Mouse is over the text!";
+    }
+
+    // Add event listeners
+    document.getElementById("addBtn").addEventListener("click", function () {
+        text.addEventListener("click", showMessage);
+        text.addEventListener("mouseover", mouseOverEffect);
+        document.addEventListener("keydown", keyPressed);
+        message.innerHTML = "Event listeners added.";
+    });
+
+    // Remove event listeners
+    document.getElementById("removeBtn").addEventListener("click", function () {
+        text.removeEventListener("click", showMessage);
+        text.removeEventListener("mouseover", mouseOverEffect);
+        document.removeEventListener("keydown", keyPressed);
+        message.innerHTML = "Event listeners removed.";
+    });
+
+    // Keyboard event
+    function keyPressed(event) {
+        message.innerHTML = "Key pressed: " + event.key;
+    }
+</script>
+</body>
+</html>
