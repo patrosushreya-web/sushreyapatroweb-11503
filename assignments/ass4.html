@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html >
+<head>
+    
+    <title>sumanmart | Smart Grocery Store</title>
+    <link rel="stylesheet" href="style4.css">
+</head>
+<body>
+
+<header class="header">
+    <h1>sumanMart</h1>
+    <p>Modern Smart Grocery Store</p>
+</header>
+
+<nav class="navbar">
+    <a href="#products">Products</a>
+    <a href="#cart">Cart</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<main class="container">
+
+    <!-- Products -->
+    <section id="products">
+        <h2>Our Products</h2>
+        <div class="product-list" id="productList">
+            <!-- Products loaded by JS -->
+        </div>
+    </section>
+
+    <!-- Cart -->
+    <section id="cart">
+        <h2>Shopping Cart</h2>
+        <ul id="cartItems"></ul>
+        <p class="total">Total: ₹<span id="totalPrice">0</span></p>
+        <button onclick="checkout()">Checkout</button>
+    </section>
+
+</main>
+
+<footer>
+    <p>© 2026 FreshMart | All Rights Reserved</p>
+</footer>
+
+<script src="script4.js"></script>
+</body>
+</html>

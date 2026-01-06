@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>FreshMart Grocery Store</title>
+    <link rel="stylesheet" href="style3.css">
+</head>
+<body>
+
+<header>
+    <h1>FreshMart Grocery Store</h1>
+    <p>Fresh • Affordable • Local</p>
+</header>
+
+<nav>
+    <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#products">Products</a></li>
+        <li><a href="#price">Price</a></li>
+        <li><a href="#media">Media</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
+<section id="about">
+    <h2>About Us</h2>
+    <p>
+        FreshMart is a local grocery shop providing fresh vegetables,
+        fruits, dairy products, and daily essentials at reasonable prices.
+    </p>
+</section>
+
+<section id="products">
+    <h2>Available Products</h2>
+    <ul id="productList">
+        <li>Vegetables</li>
+        <li>Fruits</li>
+        <li>Dairy Products</li>
+        <li>Snacks</li>
+    </ul>
+    <button onclick="addProduct()">Add Product</button>
+</section>
+
+<section id="price">
+    <h2>Price Calculator</h2>
+    <input type="number" id="qty" placeholder="Enter quantity">
+    <button onclick="calculatePrice()">Calculate</button>
+    <p id="total"></p>
+
+    <table>
+        <tr>
+            <th>Item</th>
+            <th>Price</th>
+        </tr>
+        <tr>
+            <td>Rice (1kg)</td>
+            <td>₹60</td>
+        </tr>
+        <tr>
+            <td>Milk (1L)</td>
+            <td>₹50</td>
+        </tr>
+        <tr>
+            <td>Apple (1kg)</td>
+            <td>₹120</td>
+        </tr>
+    </table>
+</section>
+
+<section id="media">
+    <h2>Shop Video</h2>
+    <video controls width="300">
+        <source src="shop.mp4" type="video/mp4">
+        Your browser does not support video.
+    </video>
+
+    <h2>Location</h2>
+    <iframe 
+        src="https://www.google.com/maps/embed"
+        width="300" height="200">
+    </iframe>
+</section>
+
+<section id="contact">
+    <h2>Contact Us</h2>
+    <p>📍 Main Market Road</p>
+    <p>📞 +91 98765 43210</p>
+    <p>📧 freshmart@gmail.com</p>
+</section>
+
+<footer>
+    <p>© 2026 FreshMart Grocery Store</p>
+</footer>
+
+<script src="script3.js"></script>
+</body>
+</html>
